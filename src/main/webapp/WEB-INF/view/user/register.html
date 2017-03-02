@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="import" href="../base/common.html" async="async">
+</head>
+<body>
+  <div id="editFlow" class="col-xs-12" style="display: none">
+    <form id="alarmForm" name="alarmForm" class="form-horizontal"
+      role="form" method="post">
+      <input type="hidden" name="cid" value="" /> <input type="hidden"
+        name="busiName" value="" />
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="busiType">产品名称</label>
+        <div class="col-sm-8">
+          <select class="form-control select2" name="busiType"
+            id="busiType" style="width: 60%">
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="settleDate">清算日期</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <input class="form-control" name="settleDate"
+              id="settleDate" style="width: 60%" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="busiNo">统计次序</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <input class="form-control" name="busiNo" id="busiNo"
+              style="width: 60%" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="alarmType">告警类型</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <select class="form-control select2" name="alarmType"
+              id="alarmType" style="width: 60%">
+              <option value="11">使用率(%)</option>
+              <option value="12">使用金额(元)</option>
+              <option value="21">剩余率(%)</option>
+              <option value="22">剩余金额(元)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="amount">数值</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <input class="form-control" name="amount" id="amount"
+              type="number" value="" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="alarmInterval">告警间隔(分钟)</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <input class="form-control" name="alarmInterval"
+              id="alarmInterval" type="number" value="" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="alarmBodyId">告警人员</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <select class="form-control select2" name="alarmBodyId"
+              id="alarmBodyId" style="width: 60%">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="cancelable">可解除</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <input class="form-control" name="cancelable"
+              id="cancelable" type="checkbox" value="1" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="isDefault">默认</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <input class="form-control" name="isDefault" id="isDefault"
+              type="checkbox" value="1" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2 no-padding-right"
+          for="isNormal">非假期后工作日</label>
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <input class="form-control" name="isNormal" id="isNormal"
+              type="checkbox" value="1" />
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <button id="editSummit" type="button"
+          class="btn btn-success btn-sm">
+          <i class="fa fa-user-plus"></i>&nbsp;保存
+        </button>
+        <button id="editWindowClose" type="button"
+          class="btn btn-info btn-sm">
+          <i class="fa fa-undo"></i>&nbsp;关闭
+        </button>
+      </div>
+    </form>
+    <div class="hr hr-dotted"></div>
+  </div>
+</body>
+</html>
